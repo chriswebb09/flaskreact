@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-const finalSpaceCharacters = [
+const listItems = [
   {
     id: 'gary',
     name: 'Gary Goodspeed'
@@ -29,7 +29,7 @@ const finalSpaceCharacters = [
 
 const SomePage = () => {
 
-  const [characters, updateCharacters] = useState(finalSpaceCharacters);
+  const [characters, updateCharacters] = useState(listItems);
 
   function handleOnDragEnd(result) {
     if (!result.destination) return;
