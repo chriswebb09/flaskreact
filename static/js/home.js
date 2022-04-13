@@ -42,10 +42,10 @@ const SomePage = () => {
   }
 
   return  <div className="App">
-  <header className="App-header">
-    <h1>Final Space Characters</h1>
-    <DragDropContext onDragEnd={handleOnDragEnd}>
-          <Droppable droppableId="characters">
+    <header className="App-header">
+      <h1>Final Space Characters</h1>
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        <Droppable droppableId="characters">
             {(provided) => (
               <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
                 {characters.map(({id, name}, index) => {
